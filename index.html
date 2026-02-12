@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto - Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div>
+            <h1>Calculadora :</h1>
+            <input type="text" name="digito01" id="dig1" placeholder="Digite o primeiro número(os)"><br>
+            <select name="operador" id="op">
+                <option value="soma">+</option>
+                <option value="subtração">-</option>
+                <option value="multiplicação">*</option>
+                <option value="divizão">/</option>
+            </select><br>
+            <input type="text" name="digito02" id="dig2" placeholder="Digite o segundo número(os)"><br><br>
+
+            <button onclick="Calcular()">Enviar</button><br>
+
+            <h3>Resuntado :</h3><br>
+
+            <h4 id="Resuntado"></h4>
+
+            <script src="script.js"></script>
+        </div>
+    </section>
+</body>
+</html>
