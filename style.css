@@ -3,68 +3,48 @@
     padding: 0;
 }
 
+h3,p{
+    color: rgb(221, 221, 221);
+}
+
 body{
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(77, 73, 73);
 }
 
-div{
-    background-color: white;
-    border: 2px solid white;
+#calculadora{
+    border: 2px solid black;
     border-radius: 5px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 0.5rem;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: rgb(20, 20, 20);
 }
 
-div h1{
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-}
-
-section{
-    align-items: center;
+#max{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: 50vh;
 }
 
-input{
-    width: 60%;
-    background-color: transparent;
-    border: 2px solid rgb(58, 58, 58);
-    border-radius: 6px;
+#visor{
+    background-color: rgb(4, 17, 3);
+    border: 2px solid rgb(2, 8, 1);
+    width: 99%;
+    height: 25%;
 }
 
-select{
-    width: 45%;
-    border: 2px solid rgb(58, 58, 58);
-    border-radius: 6px;
+#buttons{
+    align-items: center;
 }
 
 button{
-    width: 26%;
-    font-size: 15px;
-    border: 2px solid rgb(92, 92, 92);
-    border-radius: 5px;
-    background-color: rgb(206, 206, 206);
-    transition: 2ms;
+    background-color: rgb(32, 32, 32);
+    color: rgb(219, 219, 219);
+    width: 20%;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    border: 2px solid rgb(12, 12, 12);
+    border-radius: 3px;
 }
-
 button:hover{
-    background-color: rgb(219, 219, 219);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1200px) {
-    h1{
-        font-size: 20px;
-        padding: 0.5rem;
-    }
+    background-color: rgb(43, 43, 43);
 }

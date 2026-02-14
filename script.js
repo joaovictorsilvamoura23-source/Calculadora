@@ -1,24 +1,46 @@
-function Calcular(){
-    let num = document.getElementById("dig1")
-    let num1 = Number(num.value)
+let minhaCalculadora = {
+    operador: "",
+    num: "primeiro",
+    list1: [],
+    list2: [],
+    num1: 0,
+    num2: 0
+}
 
-    let nums = document.getElementById("dig2")
-    let num2 = Number(nums.value) 
+function Nums(n){
+    let resposta = document.getElementById("resposta")
 
-    let operador = document.getElementById("op")
+    if(typeof n === "number"){
+        if(minhaCalculadora.num === "primeiro"){
+            minhaCalculadora.list1.push(n)
+            resposta.innerHTML = minhaCalculadora.list1.join("")
+        }else{
+            minhaCalculadora.list2.push(n)
+            resposta.innerHTML = minhaCalculadora.list2.join("")
+        }
+    } else if(n === "ingual"){
+        minhaCalculadora.num1 = Number( minhaCalculadora.list1.join(""))
+        minhaCalculadora.num2 = Number( minhaCalculadora.list2.join(""))
+        let resuntado = 0
 
-    let resuntado = document.getElementById("Resuntado")
+        if(operador === "mais"){
+            resuntado = minhaCalculadora.num1 + minhaCalculadora.num2
+        }else if(operador === "menos"){
+            resuntado = minhaCalculadora.num1 - minhaCalculadora.num2           
+        }else if(operador === "vezes"){
+            resuntado = minhaCalculadora.num1 * minhaCalculadora.num2           
+        }else if(operador === "divisão"){
+            resuntado = minhaCalculadora.num1 / minhaCalculadora.num2           
+        }
 
-    if (operador.value === "soma"){
-        resuntado.textContent = num1 + num2
-    }
-    if (operador.value === "subtração"){
-        resuntado.textContent = num1 - num2
-    }
-    if (operador.value === "multiplicação"){
-        resuntado.textContent = num1 * num2
-    }
-    if (operador.value === "divizão"){
-        resuntado.textContent = num1 / num2
+        resposta.innerHTML = resuntado
+
+        minhaCalculadora.list1 = [resuntado]
+        minhaCalculadora.list2 = []
+        minhaCalculadora.num = "primeiro"
+    }else {
+        operador = n
+        minhaCalculadora.num = "proximo"
+        resposta.textContent = ""
     }
 }

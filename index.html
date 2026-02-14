@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto - Calculadora</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <div>
-            <h1>Calculadora :</h1>
-            <input type="text" name="digito01" id="dig1" placeholder="Digite o primeiro número(os)"><br>
-            <select name="operador" id="op">
-                <option value="soma">+</option>
-                <option value="subtração">-</option>
-                <option value="multiplicação">*</option>
-                <option value="divizão">/</option>
-            </select><br>
-            <input type="text" name="digito02" id="dig2" placeholder="Digite o segundo número(os)"><br><br>
+    <section id="max">
+        <div id="calculadora">
+            <div id="visor">
+                <h3>Resposta :</h3>
 
-            <button onclick="Calcular()">Enviar</button><br>
+                <p id="resposta"></p>
+            </div>
+            <div id="buttons">
+                <button onclick="Nums(1)">1</button>
+                <button onclick="Nums(2)">2</button>
+                <button onclick="Nums(3)">3</button>
+                <button onclick="Nums(4)">4</button>
+                <button onclick="Nums(5)">5</button>
+                <button onclick="Nums(6)">6</button>
+                <button onclick="Nums(7)">7</button>
+                <button onclick="Nums(8)">8</button>
+                <button onclick="Nums(9)">9</button>
+                <button onclick="Nums(0)">0</button>
 
-            <h3>Resuntado :</h3><br>
-
-            <h4 id="Resuntado"></h4>
-
-            <script src="script.js"></script>
+                <button onclick="Nums('mais')">+</button>
+                <button onclick="Nums('menos')">-</button>
+                <button onclick="Nums('vezes')">x</button>
+                <button onclick="Nums('divisão')">%</button>
+                <button onclick="Nums('ingual')">=</button>
+            </div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
